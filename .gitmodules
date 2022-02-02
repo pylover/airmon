@@ -1,0 +1,15 @@
+[submodule "firmware/debug"]
+	path = firmware/debug
+	url = git@github.com:pylover/esp8266-debug
+[submodule "firmware/http"]
+	path = firmware/http
+	url = git@github.com:pylover/esp8266-httpclient
+[submodule "firmware/httpd"]
+	path = firmware/httpd
+	url = git@github.com:pylover/esp8266-httpserver
+[submodule "firmware/ringbuffer"]
+	path = firmware/ringbuffer
+	url = git@github.com:pylover/esp8266-ringbuffer
+[submodule "firmware/uns"]
+	path = firmware/uns
+	url = git@github.com:pylover/esp8266-unslib
