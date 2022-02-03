@@ -482,19 +482,12 @@ httpd_err_t webadmin_sysinfo(struct httpd_session *s) {
     http_nobody_uns(pattern, "INFO", "/", httpcb, s);
 }
 
-static ICACHE_FLASH_ATTR
-httpd_err_t webadmin_conn_test(struct httpd_session *s) {
-    https_get("airmon.dobisel.com", "/", "", "", httpcb, s);
-}
-
 static struct httpd_route routes[] = {
-
 
     /* Upgrade firmware over the air (wifi) */
     {"UPGRADE",    "/firmware",           webadmin_fw_upgrade     },
 
-    /* Feel free to change these handlers */
-    {"DISCOVER",   "/uns",                webadmin_uns_discover   },
+    /* Webadmin */
     {"POST",       "/params",             webadmin_params_post    },
     {"GET",        "/params.json",        webadmin_params_get     },
     {"TOGGLE",     "/boots",              webadmin_toggle_boot    },
@@ -504,9 +497,8 @@ static struct httpd_route routes[] = {
     {"POST",       "/",                   webadmin_index_post     },
     {"REBOOT",     "/",                   webadmin_reboot         },
     
-    /* TLS Test */
-    {"TEST",     "/connection",      webadmin_conn_test   },
-    
+    /* Feel free to change these handlers */
+    {"DISCOVER",   "/uns",                webadmin_uns_discover   },
     { NULL }
 };
 
