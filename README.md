@@ -1,39 +1,28 @@
-# Airmon
+# Wi-Fi Station Example
 
-## Roadmap
+(See the README.md file in the upper level 'examples' directory for more information about examples.)
 
-- Buzzer Alarm
-- (D) Room temperature
-- (D) Room Humidity
-- Carbon Monoxide and other smokes MQ9
-- Gas detection MQ2
-- PIR
-- Earthquake
-- Status online logging on REST API
-- 7Segment dispay 
-- Photocell Light detection
+This example shows how to use the Wi-Fi Station functionality of the Wi-Fi driver of ESP for connecting to an Access Point.
 
-## ESP8266 Firmware
+## How to use example
 
-### IO Mapping
+### Configure the project
 
-- Buzzer        1 DO
-- DHT22         1 DI
-- MQ9           1 DI
-- MQ22          1 DI
-- PIR           1 DI
-- Eaarthquake   1 DI
-- 7Segment      3 Do
-- Photocell     1 DI
+Open the project configuration menu (`idf.py menuconfig`). 
 
-### Setup
+In the `Example Configuration` menu:
 
-Follow [this](https://github.com/pylover/esp8266-env) instruction to 
-prepare the development environment.
+* Set the Wi-Fi configuration.
+    * Set `WiFi SSID`.
+    * Set `WiFi Password`.
+
+Optional: If you need, change the other options according to your requirements.
+
+### Build and Flash
+
+Build the project and flash it to the board, then run the monitor tool to view the serial output:
 
 
-```bash
-source path/to/pylover/esp8266-env/activate
-cd path/to/airmon/firmware
-make ...  # TODO: instruction to make and upload firmware
-```
+
+
+
